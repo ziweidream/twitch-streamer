@@ -1,0 +1,28 @@
+.btn {
+  float: right;
+  margin-left: 15px;
+}
+
+body {
+  font-family: Arial;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+#resultOnline, #resultOffline {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#online, #resultOnline {
+  background-color: #99ff66;
+}
+
+#all {
+  background-color: blue;
+}
