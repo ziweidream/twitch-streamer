@@ -14,10 +14,10 @@ $(document).ready(function() {
     (function(i) {
       $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/" + array[i] + "?callback=?", function(data) {
         if (data["stream"] == null) {
-          $("#resultOffline").append('<li class="list-group-item" style="list-style: none; font-size:18px;"><img src="http://res.cloudinary.com/dbsgnowkn/image/upload/v1509016128/twitch-offline_q4qmpo.jpg" class="img-circle" width="30" height="30"/><a target="_blank" href="https://go.twitch.tv/' + array[i] + '"' + ">" + array[i] + '</a><span class="badge">offline</span></li>');
+          $("#resultOffline").append('<li class="list-group-item" style="list-style: none; font-size:18px;"><img src="http://res.cloudinary.com/dbsgnowkn/image/upload/v1509016128/twitch-offline_q4qmpo.jpg" class="img-circle" width="30" height="30"/><a href="https://go.twitch.tv/' + array[i] + '"' + ">" + array[i] + '</a><span class="badge">offline</span></li>');
         } else {
           $("#resultOnline").css("background-color", "#99ff66");
-          $("#resultOnline").append('<li class="list-group-item list-group-item-success" style="list-style: none; font-size:18px;"><img src="' + data.stream.channel.logo + '"' + 'class="img-circle" width="30" height="30"/><a  target="_blank" href="https://go.twitch.tv/' + array[i] + '"' + ">" + array[i] + "   " + data.stream.game + ":     " + data.stream.channel.status + '</a><span class="badge badge-success">online</span></li>');
+          $("#resultOnline").append('<li class="list-group-item list-group-item-success" style="list-style: none; font-size:18px;"><img src="' + data.stream.channel.logo + '"' + 'class="img-circle" width="30" height="30"/><a href="https://go.twitch.tv/' + array[i] + '"' + ">" + array[i] + "   " + data.stream.game + ":     " + data.stream.channel.status + '</a><span class="badge badge-success">online</span></li>');
         }
       });
     })(i);
